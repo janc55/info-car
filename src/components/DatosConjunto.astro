@@ -1,0 +1,21 @@
+---
+// src/components/DatosConjunto.astro
+---
+
+<div id="datos-conjunto" class="bg-white shadow rounded-lg p-6 opacity-0 transition-opacity duration-500">
+    <h2 id="nombre-conjunto" class="text-3xl font-bold mb-4"></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <p class="text-xl mb-2">Integrantes: <span id="integrantes"></span></p>
+        <p class="text-xl mb-2">Número de bloques: <span id="bloques"></span></p>
+        <p class="text-xl mb-4">Número de bandas: <span id="num-bandas"></span></p>
+        <h3 class="text-2xl font-semibold mb-2">Bandas:</h3>
+        <ul id="lista-bandas" class="list-disc pl-5"></ul>
+      </div>
+      <div>
+        <canvas id="grafico-bandas" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

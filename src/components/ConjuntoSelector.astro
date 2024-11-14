@@ -1,0 +1,48 @@
+---
+// src/components/ConjuntoSelector.astro
+interface Banda {
+  nombre: string;
+  integrantes: number;
+}
+
+interface Conjunto {
+  nombre: string;
+  integrantes: number;
+  numeroBloques: number;
+  bandas: Banda[];
+}
+
+interface Grupo {
+  id: number;
+  conjuntos: Conjunto[];
+}
+
+interface Props {
+  grupos: Grupo[];
+}
+
+const { grupos } = Astro.props;
+---
+
+<div class="mb-8">
+  <h2 class="text-2xl font-semibold mb-4">Selecciona un conjunto:</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {grupos.map((grupo) => (
+      <div class="bg-white shadow rounded-lg p-4">
+        <h3 class="text-xl font-semibold mb-2">Grupo {grupo.id}</h3>
+        <ul>
+          {grupo.conjuntos.map((conjunto) => (
+            <li>
+              <button
+                class="text-left w-full py-2 px-4 hover:bg-gray-100 rounded transition-colors"
+                data-conjunto={JSON.stringify(conjunto)}
+              >
+                {conjunto.nombre}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>
