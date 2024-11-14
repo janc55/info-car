@@ -20,25 +20,226 @@ interface Grupo {
 }
 
 // Aquí normalmente cargarías los datos de una base de datos o API
-const grupos: Grupo[] = [
+const grupos = [
   {
     id: 1,
     conjuntos: [
       {
         nombre: "Gran Trad. Autentica \"Diablada Oruro\"",
         integrantes: 377,
-        numeroBloques: 0,
+        numeroBloques: null, // No se especificó
         bandas: [
           { nombre: "Banda los Impecables", integrantes: 68 },
           { nombre: "Banda Proyección", integrantes: 67 },
           { nombre: "Banda Decadentes", integrantes: 62 }
         ]
       },
+      {
+        nombre: "Frat. Hijos del Sol \"Los Incas\"",
+        integrantes: 70,
+        numeroBloques: 2,
+        bandas: [
+          { nombre: "Banda Super Tropical", integrantes: 34 }
+        ]
+      },
+      {
+        nombre: "Conj. Folk \"Morenada Zona Norte\"",
+        integrantes: 260,
+        numeroBloques: 7,
+        bandas: [
+          { nombre: "Banda Poopo", integrantes: 80 },
+          { nombre: "Banda Unión Bolivia", integrantes: 50 },
+          { nombre: "Banda Super Central Oruro", integrantes: 120 },
+          { nombre: "Banda Unión Pagador", integrantes: 77 }
+        ]
+      },
+      {
+        nombre: "Frat. Art. Zampoñeros Hijos del Pagador",
+        integrantes: 158,
+        numeroBloques: 3,
+        bandas: [
+          { nombre: "Jayamara", integrantes: 46 },
+          { nombre: "Kallpa Allwika", integrantes: 30 },
+          { nombre: "Zonco Ninas", integrantes: 30 }
+        ]
+      },
+      {
+        nombre: "Centro Trad. \"Negritos de Pagador\"",
+        integrantes: 106,
+        numeroBloques: 3,
+        bandas: [
+          { nombre: "Tradicional", integrantes: 19 },
+          { nombre: "Tradicional", integrantes: 46 },
+          { nombre: "Uvas Negras", integrantes: 20 }
+        ]
+      },
+      {
+        nombre: "Conj. Folk \"Ahuatiris\"",
+        integrantes: 42,
+        numeroBloques: 2,
+        bandas: [
+          { nombre: "Banda", integrantes: 26 }
+        ]
+      },
+      {
+        nombre: "Conj. Waca Wacas \"San Agustín\" (Derecho)",
+        integrantes: 165,
+        numeroBloques: 9,
+        bandas: [
+          { nombre: "Banda Real Impacto", integrantes: 28 },
+          { nombre: "Banda Real Impacto", integrantes: 24 }
+        ]
+      },
+      {
+        nombre: "Frat. Morenada \"Central Oruro\"",
+        integrantes: 1335,
+        numeroBloques: 42,
+        bandas: [
+          { nombre: "Banda Real Imperial Oruro", integrantes: 164 },
+          { nombre: "Banda Poopo Oruro – Bolivia", integrantes: 136 },
+          { nombre: "Banda espectacular Bolivia", integrantes: 185 }
+        ]
+      },
+      {
+        nombre: "Conj. Caporales Infantiles \"Ignacio León\"",
+        integrantes: 280,
+        numeroBloques: 12,
+        bandas: [
+          { nombre: "Banda estudiantil Ignacio León", integrantes: 64 },
+          { nombre: "Banda Gran Brillantes", integrantes: 52 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    conjuntos: [
+      {
+        nombre: "Conj. Trad. Folk \"Diablada Oruro\"",
+        integrantes: 258,
+        numeroBloques: 13,
+        bandas: [
+          { nombre: "Banda 10 de febrero mundial", integrantes: 52 },
+          { nombre: "Banda Espectacular Bolívar Oruro", integrantes: 63 },
+          { nombre: "Banda Internacional San José", integrantes: 62 }
+        ]
+      },
+      {
+        nombre: "Frat. Caporales \"Centralistas\"",
+        integrantes: 300,
+        numeroBloques: 12,
+        bandas: [
+          { nombre: "Banda los Decadentes", integrantes: 62 },
+          { nombre: "Banda los Huaris", integrantes: 80 },
+          { nombre: "Banda Unión Juvenil", integrantes: 40 }
+        ]
+      },
+      {
+        nombre: "Frat. Morenada Central Oruro (Fund. por la Com. Cocani)",
+        integrantes: 1205,
+        numeroBloques: 3,
+        bandas: [
+          { nombre: "banda intercontinental poopo", integrantes: 154 },
+          { nombre: "banda central cocani Oruro", integrantes: 132 },
+          { nombre: "banda orquesta Proyección Oruro", integrantes: 143 },
+          { nombre: "banda espectacular central cocani", integrantes: 122 }
+        ]
+      },
+      {
+        nombre: "Conj. Folk \"Tobas Zona Sud\"",
+        integrantes: 427,
+        numeroBloques: 25,
+        bandas: [
+          { nombre: "Banda Unión Libertad Oruro", integrantes: 25 },
+          { nombre: "Banda ES MAGNIFICO LOS ARDIENTES", integrantes: 51 },
+          { nombre: "Banda Armonía", integrantes: 51 },
+          { nombre: "Banda Impecables", integrantes: 53 }
+        ]
+      },
+      {
+        nombre: "Conj. Negritos \"Unidos de la Saya\"",
+        integrantes: 19,
+        numeroBloques: 2,
+        bandas: [
+          { nombre: "Banda", integrantes: 40 }
+        ]
+      },
+      {
+        nombre: "Conj. Waca Tokoris \"Urus\"",
+        integrantes: 20,
+        numeroBloques: 3,
+        bandas: [
+          { nombre: "Banda real popo Oruro", integrantes: 18 }
+        ]
+      },
+      {
+        nombre: "Conj. Folk \"Antawara\"",
+        integrantes: 34,
+        numeroBloques: 3,
+        bandas: [
+          { nombre: "Banda Candelaria", integrantes: 43 }
+        ]
+      },
+      {
+        nombre: "Conj. Folk Tinkus \"Tolkas\"",
+        integrantes: 564,
+        numeroBloques: 15,
+        bandas: [
+          { nombre: "Banda Super Oruro", integrantes: 32 },
+          { nombre: "Banda Kollas Oruro", integrantes: 38 },
+          { nombre: "Banda super proyección Saracho", integrantes: 32 },
+          { nombre: "Banda internacional Juventud Dalence Oruro", integrantes: 35 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 3,
+    conjuntos: [
+      {
+        nombre: "Frat. Art. y Cult. \"La Diablada\"",
+        integrantes: 604,
+        numeroBloques: 4,
+        bandas: [
+          { nombre: "Banda 1", integrantes: 89 },
+          { nombre: "Banda 2", integrantes: 116 },
+          { nombre: "Banda 3", integrantes: 84 },
+          { nombre: "Banda 4", integrantes: 94 }
+        ]
+      },
+      {
+        nombre: "Conj. Morenada \"Mejillones\"",
+        integrantes: 466,
+        numeroBloques: 9,
+        bandas: [
+          { nombre: "Banda gran unión", integrantes: 90 },
+          { nombre: "Banda internacional Oruro", integrantes: 75 },
+          { nombre: "Banda Gran instrumental poopo", integrantes: 67 },
+          { nombre: "Banda unión pagador", integrantes: 104 }
+        ]
+      },
       // Agrega más conjuntos aquí...
     ]
   },
-  // Agrega más grupos aquí...
+  {
+    id: 4,
+    conjuntos: [
+      {
+        nombre: "Conj. \"Diablada Ferroviaria\"",
+        integrantes: 805,
+        numeroBloques: 28,
+        bandas: [
+          { nombre: "Banda Real Imperial", integrantes: 35 },
+          { nombre: "Banda Original Poopo", integrantes: 97 },
+          { nombre: "Banda Imperial Oruro", integrantes: 53 },
+          { nombre: "Banda Espectacular Poopó", integrantes: 70 }
+        ]
+      },
+      // Agrega más conjuntos aquí...
+    ]
+  }
 ];
+
 
 const totalBailarines = grupos.reduce((total, grupo) => 
   total + grupo.conjuntos.reduce((subtotal, conjunto) => subtotal + conjunto.integrantes, 0), 0);
